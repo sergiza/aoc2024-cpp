@@ -68,7 +68,6 @@ void e2(vector<string> lines) {
 
 int main() {
     ifstream file("../input/01");
-
     string line;
     vector<string> lines;
     while (getline(file, line))
