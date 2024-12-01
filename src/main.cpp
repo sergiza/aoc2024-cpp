@@ -49,38 +49,9 @@ void e2(vector<string> lines) {
         right_side.push_back(right_l);
     }
 
-    vector<int> repeated(10, 0);
-    for (auto& l : right_side){
-        switch (l) {
-            case 1:
-                repeated[1]++;
-                break;
-            case 2:
-                repeated[2]++;
-                break;
-            case 3:
-                repeated[3]++;
-                break;
-            case 4:
-                repeated[4]++;
-                break;
-            case 5:
-                repeated[5]++;
-                break;
-            case 6:
-                repeated[6]++;
-                break;
-            case 7:
-                repeated[7]++;
-                break;
-            case 8:
-                repeated[8]++;
-                break;
-            case 9:
-                repeated[9]++;
-                break;
-        }
-    }
+    unordered_map<int, int> repeated;
+    for (const int& n : right_side)
+      repeated[n]++;
 
     vector<int> similarity(left_side.size());
     for (size_t i = 0; i < left_side.size(); i++)
@@ -96,7 +67,7 @@ void e2(vector<string> lines) {
 }
 
 int main() {
-    ifstream file("../input/01sample");
+    ifstream file("../input/01");
 
     string line;
     vector<string> lines;
