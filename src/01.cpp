@@ -2,7 +2,6 @@
 using namespace std;
 
 void e1(vector<string> lines) {
-
     vector<int> left_side;
     vector<int> right_side;
     for (auto& l : lines) {
@@ -19,7 +18,6 @@ void e1(vector<string> lines) {
     sort(right_side.begin(), right_side.end());
 
     vector<int> distance(left_side.size());
-    // transform(left_side.begin(), left_side.end(), right_side.begin(), distance.begin(), plus<int>());    // test
     transform(left_side.begin(), left_side.end(), right_side.begin(), distance.begin(), [](int a, int b){return abs(a - b);} );
 
     int distance_total = accumulate(distance.begin(), distance.end(), 0);
