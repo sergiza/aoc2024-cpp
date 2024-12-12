@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <iostream>
 using namespace std;
 
 bool is_increasing(vector<int> report) {
@@ -81,7 +80,6 @@ void e(vector<string> lines, int tolerance) {
 
 int main() {
     ifstream file("../input/02");
-    // ifstream file("../input/02sample");
     string line;
     vector<string> lines;
     while (getline(file, line))
